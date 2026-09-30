@@ -1,0 +1,51 @@
+# Specific resources are cataloged individually so advice can cite the material
+# it relies on. Add trusted blog authors only after maintainer review.
+trusted_authors: []
+
+resources:
+  - id: wcag-22
+    type: w3c-standard
+    title: Web Content Accessibility Guidelines (WCAG) 2.2
+    publisher: W3C
+    url: https://www.w3.org/TR/WCAG22/
+    topics: [all]
+    use_for: normative-requirements
+    reviewed_on: "2026-09-29"
+
+  - id: wcag-22-understanding
+    type: w3c-guidance
+    title: Understanding WCAG 2.2
+    publisher: W3C
+    url: https://www.w3.org/WAI/WCAG22/Understanding/
+    topics: [all]
+    use_for: explanations-and-examples
+    reviewed_on: "2026-09-29"
+
+  - id: wcag-22-quickref
+    type: w3c-resource
+    title: How to Meet WCAG (Quick Reference)
+    publisher: W3C
+    url: https://www.w3.org/WAI/WCAG22/quickref/
+    topics: [all]
+    use_for: locating-success-criteria-and-techniques
+    reviewed_on: "2026-09-29"
+
+# Example shape for a maintainer-approved author:
+# trusted_authors:
+#   - id: author-id
+#     name: Author Name
+#     profile_url: https://example.com/about
+#     trusted_for: [design, development]
+#     reviewed_on: YYYY-MM-DD
+#
+# Example shape for an individually reviewed article:
+# resources:
+#   - id: article-id
+#     type: trusted-author-blog
+#     title: Article title
+#     author: author-id
+#     publisher: Site or publication name
+#     url: https://example.com/article
+#     topics: [design]
+#     use_for: practical-examples
+#     reviewed_on: YYYY-MM-DD

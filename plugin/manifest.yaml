@@ -1,0 +1,11 @@
+name: a11y-guidance
+description: Accessibility guidance for designing and developing web products, grounded in WCAG 2.2 Level AA and trusted resources.
+scope:
+  product_type: web
+  benchmark: WCAG 2.2
+  conformance_level: AA
+entrypoint: instructions.md
+guidance:
+  - guidance/design.md
+  - guidance/development.md
+sources: sources.yaml
