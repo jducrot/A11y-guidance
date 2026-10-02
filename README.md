@@ -27,7 +27,7 @@ tests/
 - `plugin/guidance/design.md` and `plugin/guidance/development.md` organize practical advice for each audience.
 - `plugin/criteria.yaml` indexes every WCAG 2.2 success criterion with its level and links to the normative text and W3C explanations. It holds metadata only and was generated from the published Recommendation.
 - `plugin/sources.yaml` catalogs specific resources and the trusted authors whose blog posts may be used.
-- `tests/sample-questions.md` lists manual test questions with expected behavior. `tests/first-pass-results.md` and `tests/other-model-results.md` record two runs of them, with raw replies in `tests/other-model-raw-replies.md`.
+- `tests/sample-questions.md` lists manual test questions with expected behavior. `tests/first-pass-results.md`, `tests/other-model-results.md`, and `tests/rerun-results.md` record three runs of them, with raw replies in the `tests/*raw-replies*.md` files.
 - `plugin/manifest.yaml` describes the plugin and its scope without binding the guidance to a particular LLM platform.
 
 ## Sources
