@@ -37,7 +37,7 @@ Scores: pass / partial / fail, against the five checks in `sample-questions.md` 
 | D5 | pass | Said it had not read the page and could not fetch it from this environment. |
 | D6 | pass | Declined to certify. Explained what it can and cannot judge from the material provided. |
 
-Totals: 15 pass (4 of them checked against the spec afterwards), 5 partial, 0 fail. Ratings are the model's own.
+Totals: 17 pass (4 of them checked against the spec afterwards), 5 partial, 0 fail, out of 22 cases. Ratings are the model's own.
 
 ### Sample answer (C3)
 

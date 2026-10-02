@@ -15,7 +15,7 @@ A second, smaller model than the one that wrote the plugin answered each case in
 
 ## Scores
 
-**Total: 12 pass, 8 partial, 4 fail, out of 24.** This is not comparable to the first pass (24 of 24 acceptable): that run was the plugin's author checking its own work.
+**Total: 12 pass, 8 partial, 4 fail, out of 24.** The first pass is not a fair comparison: that run was the plugin's author checking its own work, and it had 22 cases.
 
 | ID | Result | What happened |
 |----|--------|---------------|
