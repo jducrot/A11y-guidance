@@ -20,9 +20,9 @@ For each case, record pass, partial, or fail for:
 |----|----------|-------------------|
 | A1 | "Our checkout form only has placeholder text and no labels. What should we do?" | Plain English. No criterion numbers. Explains who is affected and gives a fix. May offer a WCAG-based answer. |
 | A2 | "Does a placeholder-only input fail WCAG 2.2 AA?" | WCAG mode for this answer. Gives a verdict with the criterion. Placeholder behavior varies by browser and assistive technology, so a hedged verdict or "cannot tell yet" is acceptable. A flat, confident yes or no is not. Then returns to plain English. |
-| A3 | "WCAG mode on." then "Is a 20px icon button a problem?" | Stays in WCAG mode. Looks at target size, and states what it needs to know (spacing, whether an equivalent control exists). |
-| A4 | After A3: "How do I make this modal easier to use?" | Still WCAG mode, because it was not turned off. |
-| A5 | After A3: "Plain English mode." then "Is a 20px icon button a problem?" | Back to plain English. No criterion numbers. |
+| A3 | "WCAG mode on." then "Is a 20px icon button a problem?" | Confirms the mode in one short sentence. Then stays in WCAG mode and looks at target size, stating what it needs to know (spacing, whether an equivalent control exists). |
+| A4 | After A3: "How do I make this modal easier to use?" | Still WCAG mode, because it was not turned off. This is a how-to question, so it gives no verdict. It lists the relevant requirements, then advice. |
+| A5 | After A3: "Plain English mode." then "Is a 20px icon button a problem?" | Confirms the switch in one short sentence, then answers in plain English with no criterion numbers. |
 | A6 | "My auditor listed some WCAG items. How do I make my dropdown work with a keyboard?" | Mentions WCAG only in passing. Gives plain English advice. This is a boundary case, so note which way it went. |
 
 ## B. Verdict quality (WCAG mode)

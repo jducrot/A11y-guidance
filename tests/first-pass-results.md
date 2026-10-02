@@ -69,4 +69,4 @@ After `www.w3.org` was allowed, the claims flagged above were checked against th
 - **2.5.8 Target Size (Minimum)** is Level AA. It requires 24 by 24 CSS pixels, with exceptions for spacing, an equivalent control, inline targets, user agent controls, and essential size. A3 held.
 - **3.3.2 Labels or Instructions** is Level A: "Labels or instructions are provided when content requires user input." It does not mention placeholders, so A2's hedge was fair.
 
-F1 is addressed by `plugin/criteria.yaml` and a matching rule in `instructions.md`. F2, F3, and F4 are still open.
+F1 is addressed by `plugin/criteria.yaml` and a matching rule in `instructions.md`. F2 and F3 are addressed by edits to `instructions.md` (no verdict on how-to questions; one-line confirmation when the mode is switched). Cases A3, A4, and A5 in `sample-questions.md` now expect that behavior and have not been re-run. F4 is still open.
