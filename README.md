@@ -18,11 +18,14 @@ plugin/
 │   ├── design.md
 │   └── development.md
 └── sources.yaml
+tests/
+└── sample-questions.md
 ```
 
 - `plugin/instructions.md` defines how the assistant should give and qualify guidance.
 - `plugin/guidance/design.md` and `plugin/guidance/development.md` organize practical advice for each audience.
 - `plugin/sources.yaml` catalogs specific resources and the trusted authors whose blog posts may be used.
+- `tests/sample-questions.md` lists manual test questions with expected behavior, for checking how an assistant follows the instructions.
 - `plugin/manifest.yaml` describes the plugin and its scope without binding the guidance to a particular LLM platform.
 
 ## Sources
