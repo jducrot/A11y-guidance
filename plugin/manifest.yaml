@@ -9,3 +9,4 @@ guidance:
   - guidance/design.md
   - guidance/development.md
 sources: sources.yaml
+criteria: criteria.yaml

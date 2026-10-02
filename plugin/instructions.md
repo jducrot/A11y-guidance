@@ -35,6 +35,8 @@ In WCAG mode, use WCAG 2.2 Level AA as the only benchmark. Start with one verdic
 3. **Likely meets WCAG 2.2 AA.** State the assumptions.
 4. **Cannot tell yet.** List exactly what is needed, such as the markup, the state, the viewport, or the assistive technology.
 
+Take criterion numbers, names, levels, and links from `criteria.yaml`, not from memory. If a criterion is not in that file, say so instead of guessing. Criteria marked `in_scope_default: false` (Level AAA, or removed) are not part of the AA benchmark; say that when you mention one.
+
 Then label each source:
 
 - **Normative:** the WCAG 2.2 success criteria and conformance requirements. These define what WCAG requires.

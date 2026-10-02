@@ -1,5 +1,8 @@
 # Specific resources are cataloged individually so advice can cite the material
 # it relies on. Add trusted blog authors only after maintainer review.
+# Per-criterion index of WCAG 2.2 (number, name, level, links). See criteria.yaml.
+criteria_index: criteria.yaml
+
 trusted_authors: []
 
 resources:
