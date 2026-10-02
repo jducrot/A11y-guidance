@@ -69,4 +69,22 @@ After `www.w3.org` was allowed, the claims flagged above were checked against th
 - **2.5.8 Target Size (Minimum)** is Level AA. It requires 24 by 24 CSS pixels, with exceptions for spacing, an equivalent control, inline targets, user agent controls, and essential size. A3 held.
 - **3.3.2 Labels or Instructions** is Level A: "Labels or instructions are provided when content requires user input." It does not mention placeholders, so A2's hedge was fair.
 
-F1 is addressed by `plugin/criteria.yaml` and a matching rule in `instructions.md`. F2 and F3 are addressed by edits to `instructions.md` (no verdict on how-to questions; one-line confirmation when the mode is switched). Cases A3, A4, and A5 in `sample-questions.md` now expect that behavior and have not been re-run. F4 is still open.
+F1 is addressed by `plugin/criteria.yaml` and a matching rule in `instructions.md`. F2 and F3 are addressed by edits to `instructions.md` (no verdict on how-to questions; one-line confirmation when the mode is switched). Cases A3, A4, and A5 now expect that behavior; see "Second pass" below. F4 was addressed by splitting A2 and B4 (see below).
+
+## Second pass (A2a, A2b, A3–A5, B4a, B4b)
+
+Same limits as the first pass: the same model wrote the cases and answered them, in one session, with the spec text read first. Multi-turn cases (A3–A5) again ran in one short conversation. The criteria cited were taken from `plugin/criteria.yaml` and the spec text, not from memory.
+
+| ID | Result | Notes |
+|----|--------|-------|
+| A2a | pass | "Cannot tell yet." Asked for the markup, the placeholder text, whether the instruction is needed after typing, and the browser and assistive technology. Said plainly that 3.3.2 and 4.1.2 do not mention placeholders, so no rule says they fail. Noted that disappearing text can still be a barrier for people with memory or attention difficulties. |
+| A2b | pass | "Fails." No programmatic name (4.1.2) and a visible word not tied to the input (1.3.1). Said 3.3.2 is not the main issue because visible text is present. Suggested `<label for="email">`. |
+| A3 | pass | Opened with "WCAG mode is on. Say 'WCAG mode off' to go back to plain English." Then "Cannot tell yet" on the 20px button, asking about spacing and whether an equivalent control exists. |
+| A4 | pass | Gave no verdict for the how-to question. Listed relevant requirements from the index (Keyboard 2.1.1, No Keyboard Trap 2.1.2, Focus Order 2.4.3, Focus Visible 2.4.7, Focus Not Obscured (Minimum) 2.4.11, Name, Role, Value 4.1.2), then advice. |
+| A5 | pass | Opened with "Plain English mode is on." Then answered about the 20px button with no criterion numbers. |
+| B4a | pass | "Cannot tell yet." Explained that a puzzle is a cognitive function test with four exceptions, and asked what kind of puzzle and whether another way to sign in exists. Mentioned 1.1.1's CAPTCHA rule as a separate check. |
+| B4b | pass | "Fails" 3.3.8. Typing characters is transcription, which the definition counts as a cognitive function test, and none of the four exceptions applies. Noted that an audio alternative would not help if users must transcribe it. |
+
+**Reading these results:** All seven passed, but the same model wrote the cases and the answers, so this shows the cases are consistent with the instructions, not that other models will follow them. The cases that matter most are the "a" cases, because they check that the assistant asks for missing information instead of guessing. Run them on a different model before trusting them.
+
+F4 is closed. F6 (the test is not independent) is still open.
