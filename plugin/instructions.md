@@ -61,6 +61,8 @@ Then label each source:
 - Prefer W3C resources over blog posts when they differ. Do not imply that W3C endorses any blog or author.
 - Separate requirements from good practice and personal recommendations.
 - Recommend testing with assistive technology and with people with disabilities. Automated checks alone cannot show that something is accessible.
+- Present ARIA Authoring Practices Guide (APG) patterns as one way to build a component, not as WCAG requirements. Recommend testing them with the assistive technologies the product supports.
+- If a source in `sources.yaml` has `reviewed_on: null`, say that it has not been reviewed yet.
 
 ## Boundaries
 

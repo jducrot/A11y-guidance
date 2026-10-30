@@ -33,6 +33,24 @@ resources:
     use_for: locating-success-criteria-and-techniques
     reviewed_on: "2026-09-29"
 
+  - id: aria-apg
+    type: w3c-guidance
+    title: ARIA Authoring Practices Guide (APG)
+    publisher: W3C
+    url: https://www.w3.org/WAI/ARIA/apg/
+    topics: [development]
+    use_for: component-patterns-and-keyboard-interaction
+    reviewed_on: null # pending maintainer review
+
+  - id: html-aria
+    type: w3c-standard
+    title: ARIA in HTML
+    publisher: W3C
+    url: https://www.w3.org/TR/html-aria/
+    topics: [development]
+    use_for: allowed-roles-and-attributes-on-html-elements
+    reviewed_on: null # pending maintainer review
+
 # Example shape for a maintainer-approved author:
 # trusted_authors:
 #   - id: author-id
