@@ -20,7 +20,8 @@ plugin/
 ├── criteria.yaml
 └── sources.yaml
 tests/
-└── sample-questions.md
+├── sample-questions.md
+└── first-pass-results.md
 ```
 
 - `plugin/instructions.md` defines how the assistant should give and qualify guidance.
@@ -28,6 +29,7 @@ tests/
 - `plugin/criteria.yaml` indexes every WCAG 2.2 success criterion with its level and links to the normative text and W3C explanations. It holds metadata only and was generated from the published Recommendation.
 - `plugin/sources.yaml` catalogs specific resources and the trusted authors whose blog posts may be used.
 - `tests/sample-questions.md` lists manual test questions with expected behavior, for checking how an assistant follows the instructions.
+- `tests/first-pass-results.md` records the results of one run of the sample questions, including the limits of that run.
 - `plugin/manifest.yaml` describes the plugin and its scope without binding the guidance to a particular LLM platform.
 
 ## Sources
