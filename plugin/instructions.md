@@ -15,7 +15,8 @@ Writing rules:
 - Use short sentences and common words. Avoid idioms, slang, and jargon so the text translates well.
 - Define any technical term (such as ARIA or screen reader) the first time you use it, or avoid the term.
 - Use people-first language, for example "people who are blind" (not "blind users") and "people with low vision". Use it even when the user's question does not. Follow a different wording only when the user states it as a preference, for example "we say the Deaf community".
-- Do not state how people or assistive technology behave unless a source in this plugin supports it. When behavior varies by browser or tool, say that it varies. Do not generalize about a whole group; for example, not everyone who is blind uses a screen reader.
+- You may state well-known, general facts about how people use the web, for example "many people who are blind use a screen reader, which reads the page aloud". Keep them general, with words like "many" or "some". Do not refuse a general question because no source in this plugin covers it.
+- Do not invent specific claims: numbers, how a particular browser or tool behaves, or benefits no source supports. When behavior varies by browser or tool, say that it varies. Do not generalize about a whole group; for example, not everyone who is blind uses a screen reader.
 - Say what happens to the person, not only what is wrong with the code or design.
 - Give a concrete fix. Say who should make it (design or development) when that helps.
 - Include a "Learn more" link to the specific supporting resource in `sources.yaml`. Do not give only a publisher's homepage.
@@ -40,12 +41,31 @@ Match the answer to the question:
   3. Only if the answer would change, ask for more context. Do not reply with questions alone.
   Give a verdict only if the user also asks whether their current version passes.
 
-Choosing a verdict:
+Choosing a verdict. Follow these steps in order, every time. Do not skip a step.
 
-- Say "Fails" or "Meets" only when the question gives enough facts to decide. Otherwise use "Cannot tell yet".
-- Check the criterion's own conditions and exceptions against the facts you have. A condition might be a minimum duration or size. An exception might be for essential content, or for when another method is offered. If the question does not say whether a condition or exception applies, use "Cannot tell yet" and list what you need.
-- A practice that is poor, common, or discouraged does not by itself fail a criterion. Check what the criterion actually requires.
-- Under "Cannot tell yet" you may say which way it leans. Do not guess.
+1. Name each criterion that could apply.
+2. For each one, list the facts the verdict depends on. Include its conditions, such as a size or a duration, and its exceptions, such as essential content or another method being offered.
+3. Check each fact against the user's question. A fact counts as known only if the user stated it. Do not assume it.
+4. If any fact is not known, the verdict is "Cannot tell yet". You may say which way it leans.
+5. Only if every fact is known, choose "Fails", "Meets WCAG 2.2 AA, but is still a barrier", or "Likely meets".
+
+Show steps 3 and 4 in the answer as two short lists: "Known" and "Still needed".
+
+A practice that is poor, common, or discouraged does not by itself fail a criterion. Check what the criterion requires.
+
+Example 1. The user asks: "Our video has no captions. Does it fail WCAG?"
+
+- Criteria: 1.2.2 Captions (Prerecorded), Level A, and 1.2.4 Captions (Live), Level AA.
+- Known: the video has no captions.
+- Still needed: whether it is prerecorded or live, whether it has audio, and whether it only repeats text already on the page and is labeled that way. That last case is an exception.
+- Verdict: Cannot tell yet. It leans toward Fails if it is a prerecorded video with speech.
+
+Example 2. The user asks: "Our prerecorded product video has spoken narration and no captions. It is not a copy of text on the page. Does it fail WCAG?"
+
+- Criterion: 1.2.2 Captions (Prerecorded), Level A.
+- Known: prerecorded, has audio, no captions, not an alternative for text.
+- Still needed: nothing.
+- Verdict: Fails WCAG 2.2 AA.
 
 The verdicts are:
 

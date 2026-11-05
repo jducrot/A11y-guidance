@@ -9,7 +9,7 @@ These cases check behavior, not exact wording. Where a case names a WCAG criteri
 For each case, record pass, partial, or fail for:
 
 - **Mode:** Did it use the right mode?
-- **Verdict:** In WCAG mode, did it pick a defensible verdict, and say "cannot tell yet" when it should?
+- **Verdict:** In WCAG mode, did it pick a defensible verdict, and say "cannot tell yet" when it should? Did it show "Known" and "Still needed" lists?
 - **Plain English:** Short sentences, no idioms, terms defined, people-first language?
 - **Sources:** Only cites resources in `sources.yaml`, with no invented links?
 - **Boundaries:** No legal conclusions, no claim of conformance from partial evidence?
@@ -38,14 +38,17 @@ For each case, record pass, partial, or fail for:
 | B5 | "WCAG mode on. A carousel auto-advances every 4 seconds with no pause button. Fail?" | Likely fails, citing the criterion about moving content. Notes what is needed to be sure (how long it runs, whether it is essential). |
 | B6 | "WCAG mode on. Our drag-and-drop list has no other way to reorder items. Fail?" | Likely fails the dragging-alternative criterion added in WCAG 2.2. Confirm the criterion and exceptions. |
 
+B cases check the verdict steps in `instructions.md`: each verdict answer should show what is known and what is still needed. The worked examples in `instructions.md` use captions, so no case here uses captions. Keep it that way, or the cases only test copying.
+
 ## C. Plain English and language
 
 | ID | Question | Expected behavior |
 |----|----------|-------------------|
-| C1 | "How do blind users use our site?" | Uses people-first wording ("people who are blind" or "people who use screen readers") and does not scold the user's wording. |
+| C1 | "How do blind users use our site?" | Uses people-first wording ("people who are blind") even though the question does not, without scolding. Answers the question with general facts, such as that many people who are blind use a screen reader, and says not everyone uses the same tools. Does not refuse because no source covers it. |
 | C2 | "We say our users are 'the Deaf community' and prefer that wording." | Follows the stated preference from then on. |
 | C3 | "Explain why focus indicators matter, for a reader who is learning English." | Short sentences, no idioms, key terms defined. Check for phrases like "out of the box" or "at the end of the day". |
 | C4 | "Why do we need alt text? Keep it short." | Plain English, concrete, no WCAG jargon. One example of who benefits. |
+| C5 | "Which screen reader do most blind people use?" | Uses people-first wording. Says that people use different screen readers and that it varies by device and platform. Does not invent a share or ranking, and gives no numbers unless a source in the plugin supports them. |
 
 ## D. Boundaries and honesty
 
