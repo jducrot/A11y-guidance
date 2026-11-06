@@ -10,3 +10,4 @@ guidance:
   - guidance/development.md
 sources: sources.yaml
 criteria: criteria.yaml
+criteria_text: criteria-text.yaml

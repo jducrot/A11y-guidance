@@ -18,6 +18,7 @@ plugin/
 │   ├── design.md
 │   └── development.md
 ├── criteria.yaml
+├── criteria-text.yaml
 └── sources.yaml
 tests/
 ├── sample-questions.md
@@ -36,6 +37,7 @@ tests/
 - `plugin/instructions.md` defines how the assistant should give and qualify guidance.
 - `plugin/guidance/design.md` and `plugin/guidance/development.md` organize practical advice for each audience.
 - `plugin/criteria.yaml` indexes every WCAG 2.2 success criterion with its level and links to the normative text and W3C explanations. It holds metadata only and was generated from the published Recommendation.
+- `plugin/criteria-text.yaml` holds the verbatim text of every WCAG 2.2 success criterion and the definitions it uses, generated from the published Recommendation. See "License" below.
 - `plugin/sources.yaml` catalogs specific resources and the trusted authors whose blog posts may be used.
 - `tests/sample-questions.md` lists manual test questions with expected behavior. `tests/first-pass-results.md`, `tests/other-model-results.md`, `tests/rerun-results.md`, `tests/rerun-2-results.md`, and `tests/rerun-3-results.md` record five runs of them, with raw replies in the `tests/*raw-replies*.md` files.
 - `plugin/manifest.yaml` describes the plugin and its scope without binding the guidance to a particular LLM platform.
@@ -45,6 +47,10 @@ tests/
 The source catalog includes canonical W3C resources and can include individual blog posts from authors the project maintainer has explicitly trusted. A blog post is an additional perspective, not a replacement for WCAG or W3C guidance. The assistant should link to the specific resource supporting its advice, distinguish normative requirements from recommendations, and not imply that a source is endorsed by W3C.
 
 To add a trusted author, add an entry under `trusted_authors` in `plugin/sources.yaml`; then add each reviewed post as an individual resource and associate it with that author's ID. Record a review date and relevant topics so sources can be maintained over time. Do not add an author or post as trusted by default.
+
+## License
+
+This repository is under the MIT license, except `plugin/criteria-text.yaml`. That file contains material copied from [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/), W3C Recommendation, 12 December 2024. Copyright © 2020-2024 World Wide Web Consortium. It is used under the [W3C Document License](https://www.w3.org/copyright/document-license-2023/), which allows copying but not modified versions. Keep its text verbatim and keep its notice.
 
 ## Using the plugin
 

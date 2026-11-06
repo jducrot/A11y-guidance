@@ -1,14 +1,15 @@
 # CLAUDE.md
 
-This repo is a content-only accessibility guidance plugin: Markdown prompts, a YAML source catalog, and a YAML index of WCAG 2.2 success criteria. It has no code, build, dependencies, or automated tests. "Changing the plugin" means editing prose and YAML. `tests/` holds manual test cases and the results of past runs.
+This repo is a content-only accessibility guidance plugin: Markdown prompts, a YAML source catalog, a YAML index of WCAG 2.2 success criteria, and a YAML file of their verbatim text. It has no code, build, dependencies, or automated tests. "Changing the plugin" means editing prose and YAML. `tests/` holds manual test cases and the results of past runs.
 
 ## What lives where
 
-- `plugin/manifest.yaml` is the plugin descriptor. `entrypoint`, `guidance`, `sources`, and `criteria` hold paths relative to `plugin/`.
+- `plugin/manifest.yaml` is the plugin descriptor. `entrypoint`, `guidance`, `sources`, `criteria`, and `criteria_text` hold paths relative to `plugin/`.
 - `plugin/instructions.md` is the entrypoint. It defines two answer modes: Plain English mode (the default) and WCAG mode (only when the user asks). WCAG mode answers "does this pass?" questions with one of four verdicts. "Rules for both modes" holds the shared rules for context, citation, and testing.
 - `plugin/guidance/design.md` and `plugin/guidance/development.md` each hold a numbered "Review approach" and a "Common areas to consider" list for their audience.
-- `plugin/sources.yaml` lists the resources the assistant may cite, plus `trusted_authors`, which is currently empty. Its `criteria_index` key points to `criteria.yaml`.
+- `plugin/sources.yaml` lists the resources the assistant may cite, plus `trusted_authors`, which is currently empty. Its `criteria_index` key points to `criteria.yaml`, and its `criteria_text` key points to `criteria-text.yaml`.
 - `plugin/criteria.yaml` indexes every WCAG 2.2 success criterion: number, name, level, status, and links to the normative text, Understanding page, and Quick Reference. WCAG mode takes criterion details from this file, not from memory.
+- `plugin/criteria-text.yaml` holds the verbatim text of every WCAG 2.2 success criterion, its notes, and the definitions it uses. WCAG mode quotes criterion wording and checks exceptions from this file. It is copied from W3C under the W3C Document License, not the repo's MIT license.
 - `tests/sample-questions.md` lists manual test cases with expected behavior and a scoring rubric. Other files in `tests/` record the results of runs against those cases.
 - `README.md` explains the project to people, including a directory tree of `plugin/` and `tests/`.
 
@@ -32,9 +33,16 @@ This repo is a content-only accessibility guidance plugin: Markdown prompts, a Y
 ## Editing `criteria.yaml`
 
 - The file is generated from the published W3C Recommendation. Do not hand-edit numbers, names, levels, or links, and never fill them in from memory. If something is wrong, regenerate the file from the spec and update `spec.retrieved_on`.
-- It holds metadata only. Do not copy criterion text into it; `normative_url` points to the exact wording.
+- It holds metadata only. Criterion text belongs in `criteria-text.yaml`, not here.
 - `status` is `active` or `removed-in-wcag-22`. Removed criteria have `level: null`. `in_scope_default` is true only for active Level A and AA criteria.
 - `spec.counts` must match the entries: active criteria counted by level, plus removed ones.
+
+## Editing `criteria-text.yaml`
+
+- The file is generated from the published W3C Recommendation. Never edit, reword, shorten, or fill in the text by hand: the W3C Document License allows copying but not modified versions. If something is wrong, regenerate the file from the spec and update `source.retrieved_on`.
+- Keep the header notice and the `source` block: the link to the original document, the W3C copyright notice, the document status, and the license link. The license requires them on every copy.
+- Criterion numbers and names must match `criteria.yaml`. Every id in a criterion's `definitions` list must exist under `definitions`.
+- Do not copy text from other W3C pages, such as Understanding pages, into this file without checking their license first.
 
 ## Manual tests
 
@@ -49,6 +57,7 @@ Write the prose in plain, direct imperative English with short sentences and sho
 
 There is no test runner. Before you finish:
 - Check that the YAML still parses: `ruby -ryaml -e 'ARGV.each { |f| YAML.load_file(f) }; puts "ok"' plugin/*.yaml`. PyYAML isn't installed here; Ruby's YAML parser is built in.
-- Check that every path in `manifest.yaml` exists: `ruby -ryaml -e 'm = YAML.load_file("plugin/manifest.yaml"); p [m["entrypoint"], m["sources"], m["criteria"], *m["guidance"]].reject { |f| File.exist?("plugin/#{f}") }'` should print `[]`.
+- Check that every path in `manifest.yaml` exists: `ruby -ryaml -e 'm = YAML.load_file("plugin/manifest.yaml"); p [m["entrypoint"], m["sources"], m["criteria"], m["criteria_text"], *m["guidance"]].reject { |f| File.exist?("plugin/#{f}") }'` should print `[]`.
 - If you touched `criteria.yaml`, check its counts: `ruby -ryaml -e 'd = YAML.load_file("plugin/criteria.yaml"); got = d["criteria"].group_by { |x| x["status"] == "active" ? x["level"] : "removed" }.transform_values(&:size); puts got == d["spec"]["counts"] ? "ok" : got'`.
+- If you touched `criteria-text.yaml`, check that it matches the index: `ruby -ryaml -e 't = YAML.load_file("plugin/criteria-text.yaml"); c = YAML.load_file("plugin/criteria.yaml"); a = t["criteria"].map { |x| [x["number"], x["name"]] }; b = c["criteria"].map { |x| [x["number"], x["name"]] }; m = t["criteria"].flat_map { |x| x["definitions"] || [] }.uniq - t["definitions"].keys; puts(a == b && m.empty? ? "ok" : [a - b, m].inspect)'`.
 - Check that the README tree matches `plugin/` and `tests/`.

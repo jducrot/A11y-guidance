@@ -2,6 +2,8 @@
 # it relies on. Add trusted blog authors only after maintainer review.
 # Per-criterion index of WCAG 2.2 (number, name, level, links). See criteria.yaml.
 criteria_index: criteria.yaml
+# Verbatim criterion text and definitions, under the W3C Document License. See criteria-text.yaml.
+criteria_text: criteria-text.yaml
 
 trusted_authors: []
 
