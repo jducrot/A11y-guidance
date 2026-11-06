@@ -31,7 +31,9 @@ tests/
 ├── rerun-2-results.md
 ├── rerun-2-raw-replies.md
 ├── rerun-3-results.md
-└── rerun-3-raw-replies.md
+├── rerun-3-raw-replies.md
+├── rerun-4-results.md
+└── rerun-4-raw-replies.md
 ```
 
 - `plugin/instructions.md` defines how the assistant should give and qualify guidance.
@@ -39,7 +41,7 @@ tests/
 - `plugin/criteria.yaml` indexes every WCAG 2.2 success criterion with its level and links to the normative text and W3C explanations. It holds metadata only and was generated from the published Recommendation.
 - `plugin/criteria-text.yaml` holds the verbatim text of every WCAG 2.2 success criterion and the definitions it uses, generated from the published Recommendation. See "License" below.
 - `plugin/sources.yaml` catalogs specific resources and the trusted authors whose blog posts may be used.
-- `tests/sample-questions.md` lists manual test questions with expected behavior. `tests/first-pass-results.md`, `tests/other-model-results.md`, `tests/rerun-results.md`, `tests/rerun-2-results.md`, and `tests/rerun-3-results.md` record five runs of them, with raw replies in the `tests/*raw-replies*.md` files.
+- `tests/sample-questions.md` lists manual test questions with expected behavior. `tests/first-pass-results.md`, `tests/other-model-results.md`, `tests/rerun-results.md`, `tests/rerun-2-results.md`, `tests/rerun-3-results.md`, and `tests/rerun-4-results.md` record six runs of them, with raw replies in the `tests/*raw-replies*.md` files.
 - `plugin/manifest.yaml` describes the plugin and its scope without binding the guidance to a particular LLM platform.
 
 ## Sources
