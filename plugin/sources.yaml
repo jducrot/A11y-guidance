@@ -68,6 +68,57 @@ resources:
     use_for: allowed-roles-and-attributes-on-html-elements
     reviewed_on: null # pending maintainer review
 
+  - id: ohara-use-the-dialog-element
+    type: trusted-author-blog
+    title: "Use the dialog element (reasonably)"
+    author: scott-ohara
+    publisher: scottohara.me
+    url: https://www.scottohara.me/blog/2023/01/26/use-the-dialog-element.html
+    topics: [development]
+    use_for: practical-examples
+    reviewed_on: null # pending maintainer review
+
+  - id: ohara-details-summary
+    type: trusted-author-blog
+    title: "The details and summary elements, again"
+    author: scott-ohara
+    publisher: scottohara.me
+    url: https://www.scottohara.me/blog/2022/09/12/details-summary.html
+    topics: [development]
+    use_for: practical-examples
+    reviewed_on: null # pending maintainer review
+
+  - id: watson-screen-reader-interaction-modes
+    type: trusted-author-blog
+    title: "Understanding screen reader interaction modes"
+    author: leonie-watson
+    publisher: tink.uk
+    url: https://tink.uk/understanding-screen-reader-interaction-modes/
+    topics: [development]
+    use_for: assistive-technology-behavior
+    reviewed_on: null # pending maintainer review
+
+  - id: watson-aria-label-vs-labelledby
+    type: trusted-author-blog
+    title: "The difference between aria-label and aria-labelledby"
+    author: leonie-watson
+    publisher: tink.uk
+    url: https://tink.uk/the-difference-between-aria-label-and-aria-labelledby/
+    topics: [development]
+    use_for: practical-examples
+    reviewed_on: null # pending maintainer review
+
+  - id: watson-text-descriptions-emotion-rich-images
+    type: trusted-author-blog
+    title: "Text descriptions and emotion rich images"
+    author: leonie-watson
+    publisher: tink.uk
+    url: https://tink.uk/text-descriptions-and-emotion-rich-images/
+    topics: [design]
+    use_for: practical-examples
+    reviewed_on: null # pending maintainer review
+
+
 # Example shape for a maintainer-approved author:
 # trusted_authors:
 #   - id: author-id
