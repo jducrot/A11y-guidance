@@ -5,7 +5,22 @@ criteria_index: criteria.yaml
 # Verbatim criterion text and definitions, under the W3C Document License. See criteria-text.yaml.
 criteria_text: criteria-text.yaml
 
-trusted_authors: []
+trusted_authors:
+  - id: adrian-roselli
+    name: Adrian Roselli
+    profile_url: https://adrianroselli.com/
+    trusted_for: [design, development]
+    reviewed_on: "2026-11-13"
+  - id: scott-ohara
+    name: "Scott O'Hara"
+    profile_url: https://www.scottohara.me/about/
+    trusted_for: [development]
+    reviewed_on: "2026-11-13"
+  - id: leonie-watson
+    name: "L\u00e9onie Watson"
+    profile_url: https://tink.uk/about/
+    trusted_for: [design, development]
+    reviewed_on: "2026-11-13"
 
 resources:
   - id: wcag-22

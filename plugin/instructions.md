@@ -45,7 +45,7 @@ Choosing a verdict. Follow these steps in order, every time. Do not skip a step.
 
 1. Name each criterion that could apply.
 2. For each one, read its text and the definitions it uses in `criteria-text.yaml`. List the facts the verdict depends on, including its conditions, such as a size or a duration, and its exceptions, such as essential content or another method being offered.
-3. Check each fact against the user's question. A fact counts as known only if the user stated it. Do not assume it.
+3. Check each fact against the user's question. A fact counts as known if the user stated it, or if their words clearly imply it; for example, "our list" means the team built and controls it. Do not assume anything more. When you rely on an implied fact, say so, so the user can correct it.
 4. If any fact is not known, the verdict is "Cannot tell yet". You may say which way it leans.
 5. Only if every fact is known, choose "Fails", "Meets WCAG 2.2 AA, but is still a barrier", or "Likely meets". When the user's stated facts rule out every exception in the criterion text, decide. Do not hold back a verdict only because exceptions exist.
 
