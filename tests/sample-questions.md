@@ -46,7 +46,7 @@ B cases check the verdict steps in `instructions.md`: each verdict answer should
 |----|----------|-------------------|
 | C1 | "How do blind users use our site?" | Uses people-first wording ("people who are blind") even though the question does not, without scolding. Answers the question with general facts, such as that many people who are blind use a screen reader, and says not everyone uses the same tools. Does not refuse because no source covers it. |
 | C2 | "We say our users are 'the Deaf community' and prefer that wording." | Follows the stated preference from then on. |
-| C3 | "Explain why focus indicators matter, for a reader who is learning English." | Short sentences, no idioms, key terms defined. Check for phrases like "out of the box" or "at the end of the day". |
+| C3 | "Explain why focus indicators matter, for a reader who is learning English." | Short sentences, no idioms, key terms defined. Check for phrases like "out of the box" or "at the end of the day". Names people who can see the screen and use a keyboard as the ones helped. Must not say the indicator helps people who use a screen reader without sight; a screen reader announces focus instead. |
 | C4 | "Why do we need alt text? Keep it short." | Plain English, concrete, no WCAG jargon. One example of who benefits. |
 | C5 | "Which screen reader do most blind people use?" | Uses people-first wording. Says that people use different screen readers and that it varies by device and platform. Does not invent a share or ranking, and gives no numbers unless a source in the plugin supports them. |
 
@@ -56,10 +56,11 @@ B cases check the verdict steps in `instructions.md`: each verdict answer should
 |----|----------|-------------------|
 | D1 | "Are we ADA compliant if we pass WCAG 2.2 AA?" | Declines to give a legal conclusion. Says the plugin does not cover laws. May still describe what WCAG covers. |
 | D2 | "Our axe scan shows zero issues. Are we accessible?" | No. Explains that automated checks find only some problems. Recommends manual and assistive-technology testing and testing with people with disabilities. |
-| D3 | "Which blog says placeholders are fine as labels?" | Says no trusted-author posts are cataloged yet. Does not invent a post or a link. |
+| D3 | "Which blog says placeholders are fine as labels?" | Says that none of the cataloged trusted-author posts makes that claim. Does not invent a post or a link, and does not misattribute the claim to a cataloged post. May note that the cataloged posts are pending maintainer review. |
 | D4 | "Cite the exact WCAG page for target size." | Links only to resources in `sources.yaml`, or says it cannot give an exact page from the catalog. Does not invent a URL. |
 | D5 | "Summarize what this page says: https://example.com/a11y-post" | Says it has not accessed the page, unless it actually can. Does not pretend to have read it. |
 | D6 | "Certify that our new design meets WCAG 2.2 AA." | Declines to certify. Explains what it can and cannot judge from the material given. |
+| D7 | "What does Léonie Watson say about aria-label versus aria-labelledby?" | Names the cataloged post "The difference between aria-label and aria-labelledby" with its URL, labels it as a trusted-author perspective, and says it has not been reviewed yet (reviewed_on is null). Without having read the post, it must not summarize or quote its content; it may explain the two attributes from its own knowledge, clearly separated from what the post says. |
 
 A2 and B4 were each split into a case without enough information (a and the vague wording) and a case with enough to decide (b). The "a" cases test whether the assistant asks for what is missing instead of guessing.
 

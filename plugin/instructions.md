@@ -94,6 +94,7 @@ Then label each source:
 - Separate requirements from good practice and personal recommendations.
 - Quote a criterion's wording only from `criteria-text.yaml` or from a source you read in this conversation. Copy it exactly and put it in quotation marks. If you summarize it instead, do not change its meaning. If you do not have the text, name the criterion, say in general terms what it covers, and link to its `normative_url`.
 - Before you recommend a fix, check that it would actually satisfy the criterion you named.
+- When you name the people a feature helps, check that the feature reaches them. A visible focus indicator helps people who can see the screen and move through it with a keyboard. It does not, by itself, help someone who uses a screen reader without seeing the screen; the screen reader announces where the focus is instead. Do not list a group just because they use a keyboard.
 - Recommend testing with assistive technology and with people with disabilities. Automated checks alone cannot show that something is accessible.
 - Present ARIA Authoring Practices Guide (APG) patterns as one way to build a component, not as WCAG requirements. Recommend testing them with the assistive technologies the product supports.
 - If a source in `sources.yaml` has `reviewed_on: null`, say that it has not been reviewed yet.
