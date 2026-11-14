@@ -118,6 +118,56 @@ resources:
     use_for: practical-examples
     reviewed_on: null # pending maintainer review
 
+  - id: roselli-block-links-cards
+    type: trusted-author-blog
+    title: "Block Links, Cards, Clickable Regions, Rows, Etc."
+    author: adrian-roselli
+    publisher: adrianroselli.com
+    url: https://adrianroselli.com/2020/02/block-links-cards-clickable-regions-etc.html
+    topics: [design, development]
+    use_for: practical-examples
+    reviewed_on: null # pending maintainer review
+
+  - id: roselli-under-engineered-responsive-tables
+    type: trusted-author-blog
+    title: "Under-Engineered Responsive Tables"
+    author: adrian-roselli
+    publisher: adrianroselli.com
+    url: https://adrianroselli.com/2020/11/under-engineered-responsive-tables.html
+    topics: [development]
+    use_for: practical-examples
+    reviewed_on: null # pending maintainer review
+
+  - id: roselli-avoid-spanning-table-headers
+    type: trusted-author-blog
+    title: "Avoid Spanning Table Headers"
+    author: adrian-roselli
+    publisher: adrianroselli.com
+    url: https://adrianroselli.com/2023/02/avoid-spanning-table-headers.html
+    topics: [design, development]
+    use_for: practical-examples
+    reviewed_on: null # pending maintainer review
+
+  - id: roselli-exposing-field-errors
+    type: trusted-author-blog
+    title: "Exposing Field Errors"
+    author: adrian-roselli
+    publisher: adrianroselli.com
+    url: https://adrianroselli.com/2023/04/exposing-field-errors.html
+    topics: [development]
+    use_for: practical-examples
+    reviewed_on: null # pending maintainer review
+
+  - id: roselli-modal-dialog-focus
+    type: trusted-author-blog
+    title: "Where to Put Focus When Opening a Modal Dialog"
+    author: adrian-roselli
+    publisher: adrianroselli.com
+    url: https://adrianroselli.com/2025/06/where-to-put-focus-when-opening-a-modal-dialog.html
+    topics: [development]
+    use_for: practical-examples
+    reviewed_on: null # pending maintainer review
+
 
 # Example shape for a maintainer-approved author:
 # trusted_authors:
